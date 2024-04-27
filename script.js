@@ -7,10 +7,6 @@ async function buscarCep() {
     if (resposta.erro) {
         console.log("CEP INVALIDO")
     } else {
-        document.write(resposta.logradouro, ", " 
-        ,resposta.bairro,", "
-        ,resposta.localidade ," - "
-        ,resposta.uf, "."
-        );
+        document.getElementById("resposta").innerHTML=resposta.logradouro + ", " + resposta.bairro+ ", " + resposta.localidade + " - " + resposta.uf, ".";
     }
 }
